@@ -8,6 +8,8 @@
 import UIKit
 
 class InfoCard: UIView {
+    private let valueLabel = UILabel()
+    
     init(icon: String, iconBgColor: UIColor, title: String, value: String, bgColor: UIColor) {
         super.init(frame: .zero)
         backgroundColor = bgColor
@@ -18,11 +20,12 @@ class InfoCard: UIView {
         infoCardIcon.tintColor = .black
         infoCardIcon.backgroundColor = iconBgColor
         infoCardIcon.layer.cornerRadius = 25
+        
         let titleLabel = UILabel()
         titleLabel.text = title
         titleLabel.textColor = .systemGray
         titleLabel.font = .systemFont(ofSize: 12)
-        let valueLabel = UILabel()
+        
         valueLabel.text = value
         valueLabel.font = .boldSystemFont(ofSize: 16)
         
@@ -40,6 +43,10 @@ class InfoCard: UIView {
             stack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
             stack.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
+    }
+    
+    func updateInfoValue(_ newValue: String) {
+        valueLabel.text = newValue
     }
     
     required init?(coder: NSCoder) { fatalError() }

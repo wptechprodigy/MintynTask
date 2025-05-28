@@ -49,6 +49,7 @@ class ProfileViewController: UIViewController {
         setupStats()
         setupPlantSection()
         setupBottomTabs()
+        fetchProfileData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -73,6 +74,32 @@ class ProfileViewController: UIViewController {
         
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    // MARK: - Network
+    private func fetchProfileData() {
+        ProfileService.fetchProfile { [weak self] profile in
+            DispatchQueue.main.async {
+                self?.updateUI(with: profile)
+            }
+        }
+    }
+    
+    private func updateUI(with stats: ProfileStats) {
+        updateStatCard(yearsCard, with: String(stats.years))
+        updateStatCard(helpsCard, with: String(stats.helps))
+        updateStatCard(poundsCard, with: String(stats.pounds))
+        updateInfoCard(growingPlaceCard, with: stats.growingPlace)
+        updateInfoCard(locationCard, with: stats.location)
+    }
+    
+    private func updateStatCard(_ card: StatCard,  with value: String) {
+        card.updateValue(value)
+    }
+    
+    private func updateInfoCard(_ card: InfoCard, with value: String) {
+        card.updateInfoValue(value)
+    }
+
     
     // MARK: - Setup Methods
     func setupScrollView() {

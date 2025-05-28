@@ -25,9 +25,9 @@ class ProfileService {
                 profilePicture: "rita-malcok",
                 growingPlace: "Outdoor",
                 location: "Sanremo, Italy",
-                years: 15,
-                helps: 698,
-                pounds: 535,
+                years: 45,
+                helps: 1050,
+                pounds: 987,
                 numberOfPlants: 100,
                 typeOfPlants: [
                     "Cloni",

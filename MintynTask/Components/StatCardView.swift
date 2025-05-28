@@ -8,6 +8,8 @@
 import UIKit
 
 class StatCard: UIView {
+    private let valueLabel = UILabel()
+    
     init(title: String, value: String, color: UIColor) {
         super.init(frame: .zero)
         backgroundColor = color
@@ -18,7 +20,6 @@ class StatCard: UIView {
         titleLabel.font = .systemFont(ofSize: 14)
         titleLabel.textColor = .black
         
-        let valueLabel = UILabel()
         valueLabel.text = value
         valueLabel.font = .boldSystemFont(ofSize: 20)
         valueLabel.textColor = .black
@@ -34,6 +35,10 @@ class StatCard: UIView {
             stack.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             stack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30)
         ])
+    }
+    
+    func updateValue(_ newValue: String) {
+        valueLabel.text = newValue
     }
     
     required init?(coder: NSCoder) { fatalError() }
