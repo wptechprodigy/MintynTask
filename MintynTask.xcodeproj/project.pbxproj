@@ -20,6 +20,7 @@
 		04AE5A4E2DE60B260019E4B8 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE5A4D2DE60B260019E4B8 /* TagButton.swift */; };
 		04AE5A502DE60B760019E4B8 /* BottomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE5A4F2DE60B760019E4B8 /* BottomTabBarView.swift */; };
 		04AE5A552DE7235C0019E4B8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE5A542DE7235B0019E4B8 /* UIColor+Extension.swift */; };
+		04AE5A5A2DE7373E0019E4B8 /* ProfileStatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE5A592DE7373E0019E4B8 /* ProfileStatService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		04AE5A4D2DE60B260019E4B8 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
 		04AE5A4F2DE60B760019E4B8 /* BottomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBarView.swift; sourceTree = "<group>"; };
 		04AE5A542DE7235B0019E4B8 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		04AE5A592DE7373E0019E4B8 /* ProfileStatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		04AE5A302DE5E4830019E4B8 /* MintynTask */ = {
 			isa = PBXGroup;
 			children = (
+				04AE5A582DE737200019E4B8 /* Network */,
 				04AE5A312DE5E4830019E4B8 /* AppDelegate.swift */,
 				04AE5A332DE5E4830019E4B8 /* SceneDelegate.swift */,
 				04AE5A352DE5E4830019E4B8 /* ViewController.swift */,
@@ -102,6 +105,14 @@
 				04AE5A542DE7235B0019E4B8 /* UIColor+Extension.swift */,
 			);
 			path = "UIKit+Extensions";
+			sourceTree = "<group>";
+		};
+		04AE5A582DE737200019E4B8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				04AE5A592DE7373E0019E4B8 /* ProfileStatService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				04AE5A4A2DE60A2F0019E4B8 /* StatCardView.swift in Sources */,
 				04AE5A322DE5E4830019E4B8 /* AppDelegate.swift in Sources */,
 				04AE5A4C2DE60A5C0019E4B8 /* ProfileViewController.swift in Sources */,
+				04AE5A5A2DE7373E0019E4B8 /* ProfileStatService.swift in Sources */,
 				04AE5A482DE60A060019E4B8 /* InfoCardView.swift in Sources */,
 				04AE5A342DE5E4830019E4B8 /* SceneDelegate.swift in Sources */,
 				04AE5A552DE7235C0019E4B8 /* UIColor+Extension.swift in Sources */,
